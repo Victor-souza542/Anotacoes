@@ -29,9 +29,9 @@
 - Listas encadeadas são o ideal para buscas em sequência. 
 
 
-## Caso base e Caso recursivo
+# Caso base e Caso recursivo
 
-# Looping infinito
+## Looping infinito
 
 def regressiva(i):
     print(i)
@@ -39,7 +39,7 @@ def regressiva(i):
 
 regressiva(10)
 
-# Função recursiva
+## Função recursiva
 
 def regressiva(i):
     print (i)
