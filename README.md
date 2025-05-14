@@ -32,15 +32,15 @@
 # Caso base e Caso recursivo
 
 ## Looping infinito
-
+```
 def regressiva(i):
     print(i)
     regressiva(i - 1) //devido ao fato de nao ter uma condição irá executar "infinitamente" - será interrompido ao dar erro de estouro de pilha(stack overflow).
 
 regressiva(10)
-
+```
 ## Função recursiva
-
+```
 def regressiva(i):
     print (i)
     if i <= 1: //Ao adicionar uma condição fará com que o problema do looping infinito seja resolvido, assim se torna uma função recursiva.
@@ -49,7 +49,7 @@ def regressiva(i):
         regressiva(i - 1)
 
 regressiva(10) 
-
+```
 - Quando escrever uma função recursiva, precisa informar quando a recursão deve parar.
 - Toda função recursiva tem duas partes -> Caso-base e Caso-recursivo
 - Caso-recursivo -> é quando a função chama a si mesma
