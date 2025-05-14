@@ -21,17 +21,24 @@
 - Um array armazena elementos nos slots da memória do computador em sequência, porém é necessário reservar slots antes, pois não é possível reservar mais slots caso o slot seguinte esteja "ocupado"
 - Exemplo: Digamos que você queira armazenar 10 elementos na memória e utiliza um ARRAY, neste caso você reserva 10 slots, porém o slot seguinte está ocupado, e se você depois quiser adicionar mais 5 ? não será possível pois os elementos precisam estar armazenados em slots de memória em sequência. Neste caso, se tivessem sido reservados 20 slots de memória teriam os slots para mais 5 elementos e ainda sobrariam 5. O ideal é sempre reservar mais slots de memória do que irá utilizar no momento para que em casos futuros não ocorra nenhum problema de falta de slots de memória em sequência.
 - Arrays são o ideia para realizar buscas aleatórias, pois possibilita buscar o elemento que deseja em qualquer slots, devido ao fato dos slots estarem em sequência basta contar os slots para que encontre o slot desejado.
+- Todos os elementos de um ARRAY, precisam ser do mesmo tipo.
+- Arrays permitem buscas rápidas.
 
 ## Lista encadeadas
 - Listas encadeadas podem armazenar elementos em diferentes slots de memória, independente de estar em sequência ou não.
 - Digamos que você tenha elementos armazenados em 10 slots de memória em forma de uma lista encadeada, cada slot terá o endereço do slot seguinte, assim é possível realizar o armazenamento de elementos em diferentes slots de memória, porém caso você queira realizar uma busca aleatória não será tão rápido quanto um ARRAY.
 - Exemplo: Victor quer pegar o elemento que está no slot 9, neste caso, apenas o slot 8 tem o endereço do slot 9 e ele irá precisar percorrer todo o caminho seguindo slot por slot até chegar no slot 8 que tem o endereço do slot 9, assim possibilitando que ele pegue o elemento desejado. O mesmo aconteceria caso ele quisesse pegar o elemento que está armazenado no ultimo slot(10), pois apenas o slot anterior tem o endereço do slot seguinte. É assim que a lista encadeada funciona.
-- Listas encadeadas são o ideal para buscas em sequência. 
+- Listas encadeadas são o ideal para buscas em sequência e permitem rápidas inserções e eliminações.
 
 
-# Caso base e Caso recursivo
+# Recursão
+- A recursão é quando uma função chama a si mesma, ela é usada para tornar uma resposta mais clara, ela serve para que não haja a necessidade de utilizar um loop.
+- Não há beneficio de desempenho ao utilizar a recursão, em alguns casos os loopings são melhores para o desempenho de um programa.
+- Frase de Leigh Caldwell: "Os loops podem melhorar o desempenho do programa. A recursão melhora o desempenho do seu programador, escolha o que for mais importante para a situação.
 
-## Looping infinito
+## Caso base e Caso recursivo
+
+- Looping infinito
 ```
 def regressiva(i):
     print(i)
@@ -39,7 +46,7 @@ def regressiva(i):
 
 regressiva(10)
 ```
-## Função recursiva
+- Função recursiva
 ```
 def regressiva(i):
     print (i)
@@ -54,3 +61,6 @@ regressiva(10)
 - Toda função recursiva tem duas partes -> Caso-base e Caso-recursivo
 - Caso-recursivo -> é quando a função chama a si mesma
 - Caso-base -> é quando a função não chama a si mesma novamente, assim evitando se tornar um looping infinito
+
+# Pilha de chamada(Call Stack)
+- 
