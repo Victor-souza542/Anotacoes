@@ -12,12 +12,12 @@
 - Exemplo: Para medir o tempo de execução de 100 elementos com a pesquisa binária, ela irá contar metade dos elementos por vez: 100 -> 50,25,13,7,4,2,1 são necessários apenas 7 etapas para verificar, ou seja 7ms
 - É arrendondado para um número acima pois os resultados são aproximados.
 
-## Alocação de memória
+# Alocação de memória
 - A alocação e memória são espaços(slots) da memória do computador onde você guarda elementos e em cada espaço(slot) você pode guardar 1(um) elemento.
 - fe0ffeeb é um endereço de um slot na memória, cada vez que você armazenar um elemento na memória, o mesmo terá um endereço
 - A contagem de slots de memória sempre começa em 00. Assim segue a sequência -> 00,01,02,03,04,05.. etc
 
-# Arrays
+## Arrays
 - Um array armazena elementos nos slots da memória do computador em sequência, porém é necessário reservar slots antes, pois não é possível reservar mais slots caso o slot seguinte esteja "ocupado"
 - Exemplo: Digamos que você queira armazenar 10 elementos na memória e utiliza um ARRAY, neste caso você reserva 10 slots, porém o slot seguinte está ocupado, e se você depois quiser adicionar mais 5 ? não será possível pois os elementos precisam estar armazenados em slots de memória em sequência. Neste caso, se tivessem sido reservados 20 slots de memória teriam os slots para mais 5 elementos e ainda sobrariam 5. O ideal é sempre reservar mais slots de memória do que irá utilizar no momento para que em casos futuros não ocorra nenhum problema de falta de slots de memória em sequência.
 - Arrays são o ideia para realizar buscas aleatórias, pois possibilita buscar o elemento que deseja em qualquer slots, devido ao fato dos slots estarem em sequência basta contar os slots para que encontre o slot desejado.
