@@ -1,11 +1,11 @@
 ## Anotações do básico
 
 ## Notação BIG O
-// A notação big O é uma notação que diz quão rápido é um algoritimo
+- A notação big O é uma notação que diz quão rápido é um algoritimo
 
 # Pesquisa Simples
 - A pesquisa simples tem um grande tempo de execução devido a sua necessidade de contar 1 elemento de cada vez
-- Exemplo: Para medir o tempo de execução de 100 elementos com a pesquisa simples, ela irá verificar cada elemento um de cada vez demorando 100 ms(milisegundos), se for necessário verificar 1 milhão de elementos, ela irá demorar 1 milhão de segundos !!!
+- Exemplo: Para medir o tempo de execução de 100 elementos com a pesquisa simples, ela irá verificar cada elemento um de cada vez demorando 100 ms(millisegundos), se for necessário verificar 1 milhão de elementos, ela irá demorar 1 milhão de segundos !!!
 
 #Pesquisa binária
 - A pesquisa binária tem um menor tempo de execução, pois ela conta metade dos elementos por etapa.
