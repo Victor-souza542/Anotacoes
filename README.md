@@ -66,17 +66,17 @@ regressiva(10)
 -
 
 ```
-def sauda(nome):
-    print ("Olá, " + nome + "!")
-    sauda2(nome)
-    print ("Preparando para dizer tchau...")
-    tchau()
-
 def sauda2(nome): #necessário definir as funções sauda2 e tchau para que a função sauda chame as mesmas ao ser executada.
     print("Como vai " + nome + "?") 
 
 def tchau():
     print("ok, tchau!")
+
+def sauda(nome):
+    print ("Olá, " + nome + "!")
+    sauda2(nome)
+    print ("Preparando para dizer tchau...")
+    tchau()
 
 sauda("Victor")  # está parte é necessário pois é preciso chamar a função sauda(nome) para que o código rode
 ```
