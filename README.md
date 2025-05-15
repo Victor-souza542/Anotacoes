@@ -63,7 +63,14 @@ regressiva(10)
 - Caso-base -> é quando a função não chama a si mesma novamente, assim evitando se tornar um looping infinito
 
 # Pilha de chamada(Call Stack)
--
+- Está é um estrutura de dados que chama as funções que você definiu em um código de acordo com o modo que seu código foi estruturado.
+- Possui duas ações PUSH(inserir) e POP(remover e ler)
+
+- Abaixo podemos ver exemplos de como a pilha de chamada é utilizada.
+
+### Ao chamar a função base, ou seja, a primeira função do código sauda(nome) em sauda("victor"), o computador aloca um slot de memória para esta chamada e armazena que a variável *nome* está definida como "Victor". Cada vez que o seu código chamar uma nova função após a primeira, o computador salva todos os valores das variáveis e é criado um novo slot de memória para armazenar a próxima função, este slot que vamos de slot 2 ele é inserido(PUSH) acima do slot 1 que é a base da pilha de chamada, após a segunda função ser chamada, a mesma é lida e removida(POP), após isto o slot de memória da função que foi inserida(PUSH), lida e executada(POP) é removido e o mesmo processo é feito para cada nova função chamada, ou seja, o slot de memória da primeira função que é a base, sempre irá se manter pausada e parcialmente completa e o slot 2 que armazena as próximas funções é sempre inserido,lido e removido, até que não restem mais funções.
+
+### Esta é a pilha de chamada, ao imaginar que temos a função base e acima dela é sempre inserida, lida e removida uma nova função, conseguimos entender como funciona.
 
 ```
 def sauda2(nome): #necessário definir as funções sauda2 e tchau para que a função sauda chame as mesmas ao ser executada.
@@ -72,11 +79,11 @@ def sauda2(nome): #necessário definir as funções sauda2 e tchau para que a fu
 def tchau():
     print("ok, tchau!")
 
-def sauda(nome):
-    print ("Olá, " + nome + "!")
-    sauda2(nome)
-    print ("Preparando para dizer tchau...")
-    tchau()
+def sauda(nome): # Ao chamar a função "sauda" definindo a varial nome como "Victor" é criado o slot de memória base "sauda(Victor)" 
+    print ("Olá, " + nome + "!") # A mensagem é retornada
+    sauda2(nome) # Agora inserimos a função *sauda2* em um novo slot de memória acima de *sauda*, o mesmo é lido(executado) e removido. 
+    print ("Preparando para dizer tchau...") # é retornada a mensagem com "print"
+    tchau() # E o mesmo processo feito com "sauda2" é realizado com a está nova função
 
 sauda("Victor")  # está parte é necessário pois é preciso chamar a função sauda(nome) para que o código rode
 ```
