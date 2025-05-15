@@ -63,4 +63,20 @@ regressiva(10)
 - Caso-base -> é quando a função não chama a si mesma novamente, assim evitando se tornar um looping infinito
 
 # Pilha de chamada(Call Stack)
-- 
+-
+
+```
+def sauda(nome):
+    print ("Olá, " + nome + "!")
+    sauda2(nome)
+    print ("Preparando para dizer tchau...")
+    tchau()
+
+def sauda2(nome): #necessário definir as funções sauda2 e tchau para que a função sauda chame as mesmas ao ser executada.
+    print("Como vai " + nome + "?") 
+
+def tchau():
+    print("ok, tchau!")
+
+sauda("Victor")  # está parte é necessário pois é preciso chamar a função sauda(nome) para que o código rode
+```
