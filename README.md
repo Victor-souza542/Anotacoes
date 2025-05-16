@@ -87,3 +87,12 @@ def sauda(nome): # Ao chamar a função "sauda" definindo a varial nome como "Vi
 
 sauda("Victor")  # está parte é necessário pois é preciso chamar a função sauda(nome) para que o código rode
 ```
+# Dividar para conquistar(DC)
+- DC é uma técnica muito reconhecida para solução de problemas
+- Os Algoritimos da técnica DC são recursivos, então o primeiro passo é descobrir o caso-base que deve ser o caso mais simples possível e após isto, partiremos para o caso-recursivo que é onde a estratégia DC entra em ação
+- O Algoritimo DC não é simplesmente um algoritimo para ser aplicado em um problema, mas sim uma forma de pensar em como diminuir o problema, a partir deste principio, entra a ideia de reduzir o problema até que ele se torne o caso-base(O menor caso possível)
+-
+- 
+## QuickSort
+- Quicksort é um algoritimo de ordenação e é muito mais rápido do que o algoritimo de ordenação por seleção visto anteriormente.
+- 
